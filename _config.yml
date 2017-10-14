@@ -2,9 +2,9 @@
 #
 
 # Site settings
-title: ICU Mortality
+title: Machine Learning Predictions of Mortality in the ICU
 description: |
-  Machine Learning Predictions of Mortality in the ICU
+  PATIENT SURVIVE THE HOSPITALISATION STAY? 
 owner: Joannas Yeow # or company name
 first_published: 2017 # if migrating another site, the year of your first publish
 email: joannas.y@live.com.sg
