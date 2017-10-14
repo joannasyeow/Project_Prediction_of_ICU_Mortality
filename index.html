@@ -7,7 +7,7 @@ layout: landing
 							<h2>{{ site.title }}</h2>
 							<p>{{ site.description | markdownify }}</p>
 							<ul class="actions">
-								<li><a href="#three" class="button special">Section</a></li>
+								<li><a href="#three" class="button special">Try Demo</a></li>
 							</ul>
 						</div>
 						<a href="#one" class="more scrolly">Learn More</a>
@@ -17,10 +17,12 @@ layout: landing
 					<section id="one" class="wrapper style1 special">
 						<div class="inner">
 							<header class="major">
-								<h2>Short Profile<br />
-								This is to test what happen.</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+								<h2>in-hospital mortality prediction serves as a decision support for healthcare providers</h2>
+								<p>The intensive care unit (ICU) is a specialised facility focused in treating critically ill patients who require intensive monitoring and complex medical system support.The key goal of the ICU is to stabilise and treat patients with life-threatening conditions and offer peaceful death for patients with unsalvageable conditions.<br><br>
+
+								The development of methods for prediction of mortality rates in the ICU has been motivated by the need to to increase treatment effectiveness, improved care in ICU, and functional discharge to post-acute care facilities.<br><br>
+
+								This project is obtained from the PhysioNet/CinC Challenge 2012. The aim is to develop a solution  for patient-specific prediction of in-hospital mortality can serve as a decision support for medical practitioners and medical care givers.</p>
 							</header>
 							<ul class="icons major">
 								<li><span class="icon fa-diamond major style1"><span class="label">Lorem</span></span></li>
@@ -34,9 +36,21 @@ layout: landing
 					<section id="two" class="wrapper alt style2">
 						<section class="spotlight">
 							<div class="image"><img src="images/pic01.jpg" alt="" /></div><div class="content">
-								<h2>Section 1<br />
-								sed ullamcorper</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+								<h2>Data</h2>
+								<p>The data used in this project consist of records from 4,000 ICU stays. All patients were adults who were admitted for a wide variety of reasons to cardiac, medical, surgical, and trauma ICUs.<br><br>
+
+								Up to 42 variables were recorded at least once during the first 48 hours after admission to the ICU. 6 of these variables are general descriptors (age, gender, weight, height, and type of ICU), and the remainder are time series, (such as, temperature,diastolic/systolic arterial blood pressure and lab tests) for which multiple observations may be available.<br><br>
+
+								5 additional outcome-related descriptors are known for each record:<br>
+								<ul>
+									<li>SAPS-I score (<a href="http://www.ncbi.nlm.nih.gov/pubmed/6499483">Le Gall et al., 1984</a>)</li>
+									<li>SOFA score (<a href="http://www.ncbi.nlm.nih.gov/pubmed/11594901">Ferreira et al., 2001</a>)</li>
+									<li>Length of stay (days)</li>
+									<li>Survival (days)</li>
+									<li>In-hospital death (0: survivor, or 1: died in-hospital)</li>
+								</ul>
+
+								</p>
 							</div>
 						</section>
 						<section class="spotlight">

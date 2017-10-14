@@ -2,19 +2,19 @@
 #
 
 # Site settings
-title: Predicting Mortality of ICU Patients
+title: ICU Mortality
 description: |
-  This is the description
+  Machine Learning Predictions of Mortality in the ICU
 owner: Joannas Yeow # or company name
 first_published: 2017 # if migrating another site, the year of your first publish
 email: joannas.y@live.com.sg
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "mailto:joannas.y@live.com.sg" # the base hostname & protocol for your site
 social:
-  twitter: https://twitter.com/joannasss
+  #twitter: https://twitter.com/joannasss
   github: https://github.com/joannasys
   linkedin-square: https://linkedin.com/in/joannasyeow
-  facebook-official: https://facebook.com/yeowjoannas
+  #facebook-official: https://facebook.com/yeowjoannas
   #google-plus-square: https://plus.google.com/u/0/+<username>
   #email: /contact/
   #flickr:
