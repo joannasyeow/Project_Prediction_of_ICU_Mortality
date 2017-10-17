@@ -1,0 +1,560 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Predictions of ICU Mortality</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo">A Machine Learning Project by <strong>Joannas</strong> Yeow</a>
+									<ul class="icons">
+										<li><a target="_blank" href="https://github.com/joannasys/Capstone/tree/master/__Project%20Files" class="icon fa-github"><span class="label">Github</span></a></li>
+										
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Predictions of<br />
+											ICU Mortality</h1>
+											<p>Will the patient survive the hospitalisation stay?</p>
+										</header>
+										<p>
+										The development of methods for prediction of mortality rates in the Intensive Care Unit (ICU) has been motivated by the need to to increase treatment effectiveness, improved care in ICU, and functional discharge to post-acute care facilities.<br><br>
+
+										This project is obtained from the PhysioNet/CinC Challenge 2012. The main aim is to develop a solution  for <strong>patient-specific prediction of in-hospital mortality that serves as a decision support for medical practitioners and medical care givers.</strong></p>
+										<ul class="actions">
+											<li><a href="#data" class="button big">Learn More</a></li>
+										</ul>
+									</div>
+									<span class="image object">
+										<img src="images/pic10.jpg" alt="" />
+									</span>
+								</section>
+
+							<!-- Section -->
+								<section id = "data">
+									<header class="major">
+										<h2>Data</h2>
+									</header>
+										<div class="content">
+											<strong>The data used in this project consist of records from 4,000 ICU stays. 
+											All patients were adults who were admitted for a wide variety of reasons - cardiac, medical, surgical, or trauma.
+											<br>
+											Up to 42 variables were recorded at least once during the first 48 hours: <br><br>
+											<br></strong>
+										</div>
+									<div class="features">
+										<article>
+											<!-- <span class="icon fa-diamond"></span> -->
+											<div class="content">
+												<h3>General Descriptors</h3>
+												<table class="tg">
+       
+												<tr>
+												    <td class="tg-yw4l">RecordID</td>
+												    <td class="tg-yw4l">Integer</td>
+												</tr>
+												<tr>
+												    <td class="tg-yw4l">Age</td>
+												    <td class="tg-yw4l">(years)</td>
+												</tr>
+
+												<tr>
+												    <td class="tg-yw4l">Height</td>
+												    <td class="tg-yw4l">(cm)</td>
+												</tr>
+
+												<tr>
+												    <td class="tg-yw4l">ICUtype</td>
+												    <td class="tg-yw4l">(1: Coronary Care, 2: Cardiac Surgery Recovery, <br>3: Medical ICU, or 4: Surgical ICU)</td>
+												</tr>
+
+												<tr>
+												    <td class="tg-yw4l">Gender</td>
+												    <td class="tg-yw4l">(0: female, or 1: male)</td>
+												</tr>
+
+												</table>
+											</div>
+										</article>
+
+										<article>
+											<!-- <span class="icon fa-rocket"></span> -->
+											<div class="content">
+												<h3>Outcome-related descriptors</h3>
+												<p>
+													<table class="tg">													   
+
+														<tr>
+														    <td class="tg-yw4l">SAPS-I score</td>
+														    <td class="tg-yw4l">between 0 to 163</td>
+														</tr>
+														  
+														<tr>
+														    <td class="tg-yw4l">SOFA score</td>
+														    <td class="tg-yw4l">between 0 to 4</td>
+														</tr>
+														  
+														<tr>
+														    <td class="tg-yw4l">Length of stay</td>
+														    <td class="tg-yw4l">(days)</td>
+														</tr>
+
+														<tr>
+														    <td class="tg-yw4l">Survival</td>
+														    <td class="tg-yw4l">(days)</td>
+														</tr>
+
+														<tr>
+														    <td class="tg-yw42"><b>In-hospital death</b></td>
+														    <td class="tg-yw42"><b>(0: survivor, or 1: died in-hospital)</b></td>
+														</tr>
+													
+
+													</table>
+												</p>
+											</div>
+										</article>
+
+
+
+										<article>
+											<!-- <span class="icon fa-paper-plane"></span> -->
+											<div class="content">
+												<h3>Time Series Variables</h3>
+
+												<table class="tg">
+													          
+													<tr>
+													    <td class="tg-yw4l">Albumin</td>
+													    <td class="tg-yw4l">Albumin </td>
+													    <td class="tg-yw4l">(g/dL)</td>
+													</tr>
+													<tr>
+													    <td class="tg-yw4l">ALP</td>
+													    <td class="tg-yw4l">Alkaline phosphatase</td>
+													    <td class="tg-yw4l">(IU/L)</td>
+													</tr>
+
+													<tr>
+															<td class="tg-yw4l">ALT</td>
+															<td class="tg-yw4l">Alanine transaminase</td> 
+															<td class="tg-yw4l">(IU/L)</td>
+														</tr>
+
+													<tr>
+															<td class="tg-yw4l">AST</td>
+															<td class="tg-yw4l">Aspartate transaminase</td>
+															<td class="tg-yw4l">(IU/L)</td>
+														</tr>
+														<tr>
+															<td class="tg-yw4l">Bilirubin</td>
+															<td class="tg-yw4l">Bilirubin</td>
+															<td class="tg-yw4l">(mg/dL)</td>
+														</tr>
+
+														<tr>
+															<td class="tg-yw4l">BUN</td>
+															<td class="tg-yw4l">Blood urea nitrogen</td>
+															<td class="tg-yw4l">(mg/dL)</td>
+														</tr>
+
+												</table>
+
+
+												<button id="myBtn" class="button">See all</button>
+
+													<!-- Trigger/Open The Modal -->
+												<div id="myModal" class="modal">
+
+												  <!-- Modal content -->
+												<div class="modal-content">
+												  <span class="close">&times;</span>
+												  <p>Time Series Variables
+
+													<table class="tg">
+														<tr>
+														    <th class="tg-36xf">Variable</th>
+														    <th class="tg-2lp6">Description</th>
+														    <th class="tg-2lp6">Metrics</th>
+														</tr>        
+														<tr>
+														    <td class="tg-yw4l">Albumin</td>
+														    <td class="tg-yw4l">Albumin </td>
+														    <td class="tg-yw4l">(g/dL)</td>
+														</tr>
+														<tr>
+														    <td class="tg-yw4l">ALP</td>
+														    <td class="tg-yw4l">Alkaline phosphatase</td>
+														    <td class="tg-yw4l">(IU/L)</td>
+														</tr>
+														<tr>
+															<td class="tg-yw4l">ALT</td>
+															<td class="tg-yw4l">Alanine transaminase</td> 
+															<td class="tg-yw4l">(IU/L)</td>
+														</tr>
+														<tr>
+															<td class="tg-yw4l">AST</td>
+															<td class="tg-yw4l">Aspartate transaminase</td>
+															<td class="tg-yw4l">(IU/L)</td>
+														</tr>
+														<tr>
+															<td class="tg-yw4l">Bilirubin</td>
+															<td class="tg-yw4l">Bilirubin</td>
+															<td class="tg-yw4l">(mg/dL)</td>
+														</tr>
+														<tr>
+															<td class="tg-yw4l">BUN</td>
+															<td class="tg-yw4l">Blood urea nitrogen</td>
+															<td class="tg-yw4l">(mg/dL)</td>
+														</tr>
+														<tr>
+															<td class="tg-yw4l">Cholesterol</td>
+															<td class="tg-yw4l">Cholesterol</td>
+															<td class="tg-yw4l">(mg/dL)</td>
+														</tr>
+														<tr>
+															<td class="tg-yw4l">Creatinine</td>
+															<td class="tg-yw4l">Serum creatinine</td>
+															<td class="tg-yw4l">(mg/dL)</td>
+														</tr>
+														<tr>
+															<td class="tg-yw4l">DiasABP </td>
+															<td class="tg-yw4l">Invasive diastolic arterial blood pressure </td>
+															<td class="tg-yw4l">(mmHg)</td>
+														</tr>
+														<tr>
+															<td class="tg-yw4l">FiO2 </td>
+															<td class="tg-yw4l">Fractional inspired O2 </td>
+															<td class="tg-yw4l">(0-1)</td>
+														</tr>
+														<tr>
+															<td class="tg-yw4l">GCS </td>
+															<td class="tg-yw4l">Glasgow Coma Score </td>
+															<td class="tg-yw4l">(3-15) </td>
+														</tr>					
+														<tr>
+															<td class="tg-yw4l">Glucose </td>
+															<td class="tg-yw4l">Serum glucose </td>
+															<td class="tg-yw4l">(mg/dL) </td>
+														</tr>					
+														<tr>
+															<td class="tg-yw4l">HCO3 
+															<td class="tg-yw4l">Serum bicarbonate 
+															<td class="tg-yw4l">(mmol/L)
+														</tr>
+														<tr>
+															<td class="tg-yw4l">HCT 
+															<td class="tg-yw4l">Hematocrit 
+															<td class="tg-yw4l">(%)
+														</tr>
+														<tr>
+															<td class="tg-yw4l">HR 
+															<td class="tg-yw4l">Heart rate
+															<td class="tg-yw4l">(bpm)
+														</tr>
+														<tr>
+															<td class="tg-yw4l">K 
+															<td class="tg-yw4l">Serum potassium 
+															<td class="tg-yw4l">(mEq/L)
+														</tr>
+														<tr>
+															<td class="tg-yw4l">Lactate 
+															<td class="tg-yw4l">Lactate
+															<td class="tg-yw4l">(mmol/L)
+														</tr>
+														<tr><td class="tg-yw4l">Mg 
+															<td class="tg-yw4l">Serum magnesium 
+															<td class="tg-yw4l">(mmol/L)
+														</tr>
+														<tr>
+															<td class="tg-yw4l">MAP 
+															<td class="tg-yw4l">Invasive mean arterial blood pressure 
+															<td class="tg-yw4l">(mmHg)
+														</tr>
+														<tr>
+															<td class="tg-yw4l">MechVent 
+															<td class="tg-yw4l">Mechanical ventilation respiration 
+															<td class="tg-yw4l">(0:false, or 1:true)
+														</tr>
+														<tr>
+															<td class="tg-yw4l">Na 
+															<td class="tg-yw4l">Serum sodium 
+															<td class="tg-yw4l">(mEq/L)
+														</tr>
+														<tr>
+															<td class="tg-yw4l">NIDiasABP 
+															<td class="tg-yw4l">Non-invasive diastolic arterial blood pressure 
+															<td class="tg-yw4l">(mmHg)
+														</tr>
+														<tr>
+															<td class="tg-yw4l">NIMAP 
+															<td class="tg-yw4l">Non-invasive mean arterial blood pressure 
+															<td class="tg-yw4l">(mmHg)
+														</tr>
+														<tr>
+															<td class="tg-yw4l">NISysABP 
+															<td class="tg-yw4l">Non-invasive systolic arterial blood pressure 
+															<td class="tg-yw4l">(mmHg)
+														</tr>
+														<tr>
+															<td class="tg-yw4l">PaCO2 
+															<td class="tg-yw4l">partial pressure of arterial CO2 
+															<td class="tg-yw4l">(mmHg)
+														</tr>
+														<tr>
+															<td class="tg-yw4l">PaO2 
+															<td class="tg-yw4l">Partial pressure of arterial O2 
+															<td class="tg-yw4l">(mmHg)
+														</tr>
+														<tr><td class="tg-yw4l">pH <td class="tg-yw4l">Arterial pH <td class="tg-yw4l">(0-14)</tr>
+														<tr><td class="tg-yw4l">Platelets <td class="tg-yw4l">Platelets<td class="tg-yw4l">(cells/nL)</tr>
+														<tr><td class="tg-yw4l">RespRate <td class="tg-yw4l">Respiration rate <td class="tg-yw4l">(bpm)</tr>
+														<tr><td class="tg-yw4l">SaO2 <td class="tg-yw4l">O2 saturation in hemoglobin <td class="tg-yw4l">(%)</tr>
+														<tr><td class="tg-yw4l">SysABP <td class="tg-yw4l">Invasive systolic arterial blood pressure <td class="tg-yw4l">(mmHg)</tr>
+														<tr><td class="tg-yw4l">Temp <td class="tg-yw4l">Temperature <td class="tg-yw4l">(°C)</tr>
+														<tr><td class="tg-yw4l">TropI <td class="tg-yw4l">Troponin-I <td class="tg-yw4l">(μg/L)</tr>
+														<tr><td class="tg-yw4l">TropT <td class="tg-yw4l">Troponin-T <td class="tg-yw4l">(μg/L)</tr>
+														<tr><td class="tg-yw4l">Urine <td class="tg-yw4l">Urine output <td class="tg-yw4l">(mL)</tr>
+														<tr><td class="tg-yw4l">WBC <td class="tg-yw4l">White blood cell count <td class="tg-yw4l">(cells/nL)</tr>
+														<tr><td class="tg-yw4l">Weight <td class="tg-yw4l">Weight<td class="tg-yw4l">(kg)</tr></table>
+													</p>
+												</div>
+												</div>
+											</div>
+										</article>
+										<article>
+											<!-- <span class="icon fa-paper-plane"></span> -->
+											<div class="content">
+
+												<table class="tg">
+													          
+													<tr>
+													    <td class="tg-yw4l">Albumin</td>
+													    <td class="tg-yw4l">Albumin </td>
+													    <td class="tg-yw4l">(g/dL)</td>
+													</tr>
+													<tr>
+													    <td class="tg-yw4l">ALP</td>
+													    <td class="tg-yw4l">Alkaline phosphatase</td>
+													    <td class="tg-yw4l">(IU/L)</td>
+													</tr>
+
+													<tr>
+															<td class="tg-yw4l">ALT</td>
+															<td class="tg-yw4l">Alanine transaminase</td> 
+															<td class="tg-yw4l">(IU/L)</td>
+														</tr>
+
+													<tr>
+															<td class="tg-yw4l">AST</td>
+															<td class="tg-yw4l">Aspartate transaminase</td>
+															<td class="tg-yw4l">(IU/L)</td>
+														</tr>
+														<tr>
+															<td class="tg-yw4l">Bilirubin</td>
+															<td class="tg-yw4l">Bilirubin</td>
+															<td class="tg-yw4l">(mg/dL)</td>
+														</tr>
+
+														<tr>
+															<td class="tg-yw4l">BUN</td>
+															<td class="tg-yw4l">Blood urea nitrogen</td>
+															<td class="tg-yw4l">(mg/dL)</td>
+														</tr>
+
+												</table>
+												<p></p>
+
+											</div>
+										</article>
+										
+											
+									</div>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Ipsum sed dolor</h2>
+									</header>
+									<div class="posts">
+										<article>
+											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+											<h3>Interdum aenean</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+											<h3>Nulla amet dolore</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+											<h3>Tempus ullamcorper</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+											<h3>Sed etiam facilis</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+											<h3>Feugiat lorem aenean</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
+											<h3>Amet varius aliquam</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+									</div>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="generic.html">Generic</a></li>
+										<li><a href="elements.html">Elements</a></li>
+										<li>
+											<span class="opener">Submenu</span>
+											<ul>
+												<li><a href="#">Lorem Dolor</a></li>
+												<li><a href="#">Ipsum Adipiscing</a></li>
+												<li><a href="#">Tempus Magna</a></li>
+												<li><a href="#">Feugiat Veroeros</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Etiam Dolore</a></li>
+										<li><a href="#">Adipiscing</a></li>
+										<li>
+											<span class="opener">Another Submenu</span>
+											<ul>
+												<li><a href="#">Lorem Dolor</a></li>
+												<li><a href="#">Ipsum Adipiscing</a></li>
+												<li><a href="#">Tempus Magna</a></li>
+												<li><a href="#">Feugiat Veroeros</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Maximus Erat</a></li>
+										<li><a href="#">Sapien Mauris</a></li>
+										<li><a href="#">Amet Lacinia</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Ante interdum</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="#" class="button">More</a></li>
+									</ul>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+									<ul class="contact">
+										<li class="fa-envelope-o"><a href="#">information@untitled.tld</a></li>
+										<li class="fa-phone">(000) 000-0000</li>
+										<li class="fa-home">1234 Somewhere Road #8254<br />
+										Nashville, TN 00000-0000</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
