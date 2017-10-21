@@ -285,28 +285,28 @@
 //Modal
 
 // Get the modal
-var modal = document.getElementById('myModal');
+var mymodal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var mybtn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var myspan = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
+mybtn.onclick = function() {
+    mymodal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
+myspan.onclick = function() {
+    mymodal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target == mymodal) {
+        mymodal.style.display = "none";
     }
 }
 
@@ -337,7 +337,176 @@ $(document).ready(function(){
   });
 });
 
+//imba_Modal
 
+// Get the modal
+var imba_modal = document.getElementById('imba_modal');
+
+// Get the button that opens the modal
+var imba_btn = document.getElementById("imba_btn");
+
+// Get the <span> element that closes the modal
+var imba_span = document.getElementsByClassName("imba_close")[0];
+
+// When the user clicks the button, open the modal 
+imba_btn.onclick = function() {
+    imba_modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+imba_span.onclick = function() {
+    imba_modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == imba_modal) {
+        imba_modal.style.display = "none";
+    }
+}
+
+//feat_Modal
+
+// Get the modal
+var feat_modal = document.getElementById('feat_modal');
+
+// Get the button that opens the modal
+var feat_btn = document.getElementById("feat_btn");
+
+// Get the <span> element that closes the modal
+var feat_span = document.getElementsByClassName("feat_close")[0];
+
+// When the user clicks the button, open the modal 
+feat_btn.onclick = function() {
+    feat_modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+feat_span.onclick = function() {
+    feat_modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == feat_modal) {
+        feat_modal.style.display = "none";
+    }
+}
+
+
+//data_ex_Modal
+
+// Get the modal
+var data_ex_modal = document.getElementById('data_ex_modal');
+
+// Get the button that opens the modal
+var data_ex_btn = document.getElementById("data_ex_btn");
+
+// Get the <span> element that closes the modal
+var data_ex_span = document.getElementsByClassName("data_ex_close")[0];
+
+// When the user clicks the button, open the modal 
+data_ex_btn.onclick = function() {
+    data_ex_modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+data_ex_span.onclick = function() {
+    data_ex_modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == data_ex_modal) {
+        data_ex_modal.style.display = "none";
+    }
+}
+
+//data_stand_Modal
+
+// Get the modal
+var data_stand_modal = document.getElementById('data_stand_modal');
+
+// Get the button that opens the modal
+var data_stand_btn = document.getElementById("data_stand_btn");
+
+// Get the <span> element that closes the modal
+var data_stand_span = document.getElementsByClassName("data_stand_close")[0];
+
+// When the user clicks the button, open the modal 
+data_stand_btn.onclick = function() {
+    data_stand_modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+data_stand_span.onclick = function() {
+    data_stand_modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == data_stand_modal) {
+        data_stand_modal.style.display = "none";
+    }
+}
+
+
+
+//feat_sel_Modal
+
+// Get the modal
+var feat_sel_modal = document.getElementById('feat_sel_modal');
+
+// Get the button that opens the modal
+var feat_sel_btn = document.getElementById("feat_sel_btn");
+
+// Get the <span> element that closes the modal
+var feat_sel_span = document.getElementsByClassName("feat_sel_close")[0];
+
+// When the user clicks the button, open the modal 
+feat_sel_btn.onclick = function() {
+    feat_sel_modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+feat_sel_span.onclick = function() {
+    feat_sel_modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == feat_sel_modal) {
+        feat_sel_modal.style.display = "none";
+    }
+}
+
+//resamp_Modal
+
+// Get the modal
+var resamp_modal = document.getElementById('resamp_modal');
+
+// Get the button that opens the modal
+var resamp_btn = document.getElementById("resamp_btn");
+
+// Get the <span> element that closes the modal
+var resamp_span = document.getElementsByClassName("resamp_close")[0];
+
+// When the user clicks the button, open the modal 
+resamp_btn.onclick = function() {
+    resamp_modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+resamp_span.onclick = function() {
+    resamp_modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == resamp_modal) {
+        resamp_modal.style.display = "none";
+    }
+}
 
 
 })(jQuery);

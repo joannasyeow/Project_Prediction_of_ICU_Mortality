@@ -49,7 +49,7 @@
 										</ul>
 									</div>
 									<span class="image object">
-										<img src="images/pic10.jpg" alt="" />
+										<img src="images/heart_rate.jpg" alt="" />
 									</span>
 								</section>
 
@@ -351,39 +351,36 @@
 
 												<table class="tg">
 													          
-													<tr>
-													    <td class="tg-yw4l">Albumin</td>
-													    <td class="tg-yw4l">Albumin </td>
-													    <td class="tg-yw4l">(g/dL)</td>
-													</tr>
-													<tr>
-													    <td class="tg-yw4l">ALP</td>
-													    <td class="tg-yw4l">Alkaline phosphatase</td>
-													    <td class="tg-yw4l">(IU/L)</td>
-													</tr>
-
-													<tr>
-															<td class="tg-yw4l">ALT</td>
-															<td class="tg-yw4l">Alanine transaminase</td> 
-															<td class="tg-yw4l">(IU/L)</td>
-														</tr>
-
-													<tr>
-															<td class="tg-yw4l">AST</td>
-															<td class="tg-yw4l">Aspartate transaminase</td>
-															<td class="tg-yw4l">(IU/L)</td>
-														</tr>
 														<tr>
-															<td class="tg-yw4l">Bilirubin</td>
-															<td class="tg-yw4l">Bilirubin</td>
+															<td class="tg-yw4l">Cholesterol</td>
+															<td class="tg-yw4l">Cholesterol</td>
 															<td class="tg-yw4l">(mg/dL)</td>
 														</tr>
-
 														<tr>
-															<td class="tg-yw4l">BUN</td>
-															<td class="tg-yw4l">Blood urea nitrogen</td>
+															<td class="tg-yw4l">Creatinine</td>
+															<td class="tg-yw4l">Serum creatinine</td>
 															<td class="tg-yw4l">(mg/dL)</td>
 														</tr>
+														<tr>
+															<td class="tg-yw4l">DiasABP </td>
+															<td class="tg-yw4l">Invasive diastolic arterial blood pressure </td>
+															<td class="tg-yw4l">(mmHg)</td>
+														</tr>
+														<tr>
+															<td class="tg-yw4l">FiO2 </td>
+															<td class="tg-yw4l">Fractional inspired O2 </td>
+															<td class="tg-yw4l">(0-1)</td>
+														</tr>
+														<tr>
+															<td class="tg-yw4l">GCS </td>
+															<td class="tg-yw4l">Glasgow Coma Score </td>
+															<td class="tg-yw4l">(3-15) </td>
+														</tr>					
+														<tr>
+															<td class="tg-yw4l">Glucose </td>
+															<td class="tg-yw4l">Serum glucose </td>
+															<td class="tg-yw4l">(mg/dL) </td>
+														</tr>					
 
 												</table>
 												<p></p>
@@ -398,56 +395,228 @@
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>Ipsum sed dolor</h2>
+										<h2>Analysis</h2>
 									</header>
 									<div class="posts">
 										<article>
-											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-											<h3>Interdum aenean</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
+											<a class="image"><img src="images/imba_1.png" alt="" /></a>
+											<h3>Imbalanced Class</h3>
+											<p>In-hospital mortality will be our target in this project - 1 being in-hospital death while 0 being survival. There are only 13.9% of in-hospital mortality (positives) in the dataset. In such cases, using accuracy as a metric will be misleading and unreliable.</p>
+
+											<button id="imba_btn" class="button">More</button>
+
+													<!-- Trigger/Open The Modal -->
+												<div id="imba_modal" class="modal">
+
+												  <!-- Modal content -->
+												<div class="modal-content">
+												  <span class="imba_close">&times;</span>
+												  <br>
+												  <h3>Imbalanced Class</h3>
+												  <p> In-hospital mortality will be our target in this project - 1 being in-hospital death while 0 being survival. The graph below shows the distribution of the two classes. There are only 13.9% of in-hospital mortality (positives) in the dataset. In such cases, using accuracy as a metric will be misleading and unreliable. (Think about it. Even without any algorithm, we will achieve an accuracy of 86.1%!)
+												  <br><br>
+												  <img src="images/imba_1.png" alt="" />
+												  <br><br>Hence, instead of accuracy, precision and recall scores will be a more meaningful metric to evaluate our model performance. We will be using the same scoring as the PhysioNet 2012 challenge - the minimum of precision score and recall score. We define true positives (TP), false positives (FP), false negatives (FN), and true negatives (TN) as below:
+												  <br><br>
+												  <img src="images/imba_2.png" alt="" />
+													<br><br>
+													<img src="https://latex.codecogs.com/gif.latex?Precision&space;=&space;\frac{TP}{(TP&space;&plus;&space;FP)}" title="Precision = \frac{TP}{(TP + FP)}" />
+													<br><br>
+													<img src="https://latex.codecogs.com/gif.latex?Recall&space;=&space;\frac{TP}{TP&space;&plus;&space;FN}" title="Recall = \frac{TP}{TP + FN}" />
+													</p>
+													<br><span class="imba_close">&times;</span>
+
+												</div>
+												</div>
+											
+											<!--<ul class="actions">
 												<li><a href="#" class="button">More</a></li>
-											</ul>
+											</ul>-->
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-											<h3>Nulla amet dolore</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
+											<a class="image"><img src="images/feat_engine_a.png" alt="" /></a>
+											<h3>Feature Engineering</h3>
+											<p>Each patient record is in the form of a time series. To capture the best property of the time series, the mean, minimum and maximum, first and last observed data to represent the average and extremities are extracted.</p>
+											<button id="feat_btn" class="button">More</button>
+
+													<!-- Trigger/Open The Modal -->
+												<div id="feat_modal" class="modal">
+
+												  <!-- Modal content -->
+												<div class="modal-content">
+												
+												  <span class="feat_close">&times;</span>
+
+												  <h3>Feature Engineering</h3>
+												  <p> Each patient record is in the form of a time series - variables may be observed once, more than once, or not at all in some cases within 48 hours. Descriptor variables are recorded at time 00:00. To capture the best property of the time series, we will have to extract out batches of aggregated information from it. Table 1 below shows the original time series data.
+												  <br><br>
+												  <img src="images/feat_engine_timeseries.png" alt="" /><br>Table 1
+												  <br><br>We have chosen to extract the mean, minimum and maximum, first and last observed data to represent the average and extremities of the time series. Table 2 below shows the extracted data for a patient record. 
+												  <br><br>
+												  <img src="images/feat_engine.png" alt="" /><br>Table 2
+												  <br><br>
+												  After extraction, we observed that most patient records lack laboratory test results and most variables leading to many ‘Not-a-number’ (NaN) values in the dataset which would cause a problem in our modelling. 
+												  <br><br>
+												  To resolve the issue of NaN values, we imputed the NaN values for each variable of each patient based on the median of the same age group, ICU type and gender group. This seems to better represent the patient’s condition. Certain conditions may have some extremes in certain variables, it would not be fair if we were to perform a simple mean or median imputation.
+												  <br><br>
+												  Table 3 below shows the median value of each variables based on age group, ICU type and gender.
+												  <br><br>
+												  <img src="images/feat_engine_group.png" alt="" /><br>Table 3
+
+													</p>
+
+												</div>
+												</div>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-											<h3>Tempus ullamcorper</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
+											<a class="image"><img src="images/data_ex_corrmatrix.png" alt="" /></a>
+											<h3>Data Exploration and Preprocessing</h3>
+											<p>
+											We will be investigating multi-colinearity between features and identifying outliers in the dataset with visualisations.</p>
+											<button id="data_ex_btn" class="button">More</button>
+
+													<!-- Trigger/Open The Modal -->
+												<div id="data_ex_modal" class="modal">
+
+												  <!-- Modal content -->
+												<div class="modal-content">
+												  <span class="data_ex_close">&times;</span>
+
+												  <h3>Data Exploration and Preprocessing</h3>
+												  <p> <img src="images/data_ex_corrmatrix.png" alt="" /><br><br>
+												  	In the above correlation matrix, we can see that there are more lighter blue than red. A lighter colour indicates that there is little correlation between the features. The distinct diagonal lines are due to high correlations between the mean, minimum, maximum, first and last of the same variable.
+												  	<br><br>
+												  	Later in the model development, we will investigate and compare results between taking all features or feature selection based on variance inflation factor.
+												  	<br><br>
+												  	<img src="images/data_ex_box_plot.png" alt="" />
+												  	<br><br>
+												  	The box plot above visualises the outliers in the dataset. There are clearly some distinct outliers that doesn't look right. Let's investigate further into it.
+												  	<br><br>
+												  	<img src="images/data_ex_desc.png" alt="" />
+												  	<br><br>
+												  	Looking in depth in to the .describe attribute (from pandas), we made the following observations:
+												  	<br><br>
+												  	<strong>Urine output</strong>
+												  	<br>Urine output seems to be the one that has the highest outlier. A higher urine output level could be due to a longer interval between data record and collection, hence the large discrepancy. (Urine output with a 10 hour interval will have much higher value than a 1 hour interval.) Urine output will not be a suitable feature for prediction. We will drop this feature.
+												  	<br><br><strong>PH</strong>
+												  	<br>PH level is between 0 - 14. There are some records that are off the charts, probably due to human error or different metrics. We will be imputing them with the median of the same age group, ICU type and gender group.
+
+
+												  </p>
+
+
+
+
+												</div>
+												</div>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3>Sed etiam facilis</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
+											<br><br><br> <a class="image"><img src="images/data_stand_class2.png" alt="" /></a>
+											<br><br><br> <h3>Data Standardisation</h3>
+											<p>
+											After preprocessing, we used RobustScaler to scale numerical data and got dummy variables for categorical data.</p>
+											<button id="data_stand_btn" class="button">More</button>
+
+													<!-- Trigger/Open The Modal -->
+												<div id="data_stand_modal" class="modal">
+
+												  <!-- Modal content -->
+												<div class="modal-content">
+												  <span class="data_stand_close">&times;</span>
+
+												  <h3>Data Standardisation</h3>
+												  <p> 
+												  	After preprocessing, we used sklearn’s RobustScaler to standardise the numerical variables. Standardisation is essential to improve the predictive performance of our algorithms - especially so for gradient-based classifiers. RobustScaler scales the data based on the percentiles rather than the mean and standard deviation, it is not influenced by marginal outliers.
+												  	<br><br>
+												  	For categorial features, we used pandas’ pd.get_dummies method to obtain a matrix of dummy variables in 0 or 1. While some algorithms (such as decision trees and random forest) do not require this step, most machine learning algorithm requires all features to be numerical.
+												  	<br><br>
+												  	It is written in a class to allow easy implementation of sklearn’s convenient Pipelines and FeatureUnion.
+												  	<br><br>
+												  	<img src="images/data_stand_class1.png" alt="" />
+												  	<br><br>
+												  	<img src="images/data_stand_class2.png" alt="" />
+												  	<br><br>
+												  	<img src="images/data_stand_class3.png" alt="" />
+												  	<br><br>
+
+												  </p>
+
+												</div>
+												</div>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3>Feugiat lorem aenean</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
+											<a class="image"><img src="images/feat_sel_corrmatrix.png" alt="" /></a>
+											<h3>Feature Selection</h3>
+											<p>The existence of multicolinear features may add noise to our model resulting in overfitting. Using the variance inflation factor(VIF), we will be able to estimate how much the variance of a regression coefficient of a particular feature is inflated due to multicollinearity.
+											</p>
+											<button id="feat_sel_btn" class="button">More</button>
+
+													<!-- Trigger/Open The Modal -->
+												<div id="feat_sel_modal" class="modal">
+
+												  <!-- Modal content -->
+												<div class="modal-content">
+												  <span class="feat_sel_close">&times;</span>
+
+												  <h3>Feature Selection</h3>
+												  <p> 
+												  	<img src="images/data_ex_corrmatrix.png" alt="" />
+												  	<br><br>
+												  	Recall from the correlation matrix that there are some features that are multicollinear with each other. The existence of multicolinear features may add noise to our model resulting in overfitting. Using the variance inflation factor(VIF), we will be able to estimate how much the variance of a regression coefficient of a particular feature is inflated due to multicollinearity. 
+												  	<br><br>
+												  	The VIF ranges from 1 (1 being not correlated). We have set a threshold of 5, any features with VIF > 5 will be eliminated from the model.
+												  	<br><br>
+
+												  	<img src="https://latex.codecogs.com/gif.latex?VIF&space;=&space;\frac{1}{1&space;-&space;R_{i}^{2}}" title="VIF = \frac{1}{1 - R_{i}^{2}}" /></a>
+												  	<br><br>
+												  	<img src="https://latex.codecogs.com/gif.latex?where,i&space;= x_{1},x_{2}..x_{n}"/>
+												  	<br><br>
+												  	Matrix below shows the remaining features after applying VIF at threshold of 5. The distinct diagonal lines are eliminated.
+												  	<br><br>
+												  	<img src="images/feat_sel_corrmatrix.png" alt="" />
+												  	<br><br>
+
+												  </p>
+
+												</div>
+												</div>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3>Amet varius aliquam</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
+											<br><a class="image"><img src="images/resamp_pie.png" alt="" /></a>
+											<br><br><h3>Imbalanced Class Resampling</h3>
+											<p>To deal with this problem, there are two approaches that we have used in this dataset: Oversampling with Synthetic Minority Over-sampling Technique (SMOTE) and Edited Nearest Neighbours (ENN).
+											</p>
+											<button id="resamp_btn" class="button">More</button>
+
+													<!-- Trigger/Open The Modal -->
+												<div id="resamp_modal" class="modal">
+
+												  <!-- Modal content -->
+												<div class="modal-content">
+												  <span class="resamp_close">&times;</span>
+
+												  <h3>Imbalanced Class Resampling</h3>
+												  <p> Recall that we are dealing with an imbalanced dataset in this project. There are only 13.9% of in-hospital mortality (positives) in the dataset.
+												  	<br><br>
+												  	<img src="images/imba_1.png" alt="" />
+												  	<br><br>
+												  	If we were to build a classifier in this dataset, we will probably obtain a 86% accuracy. However, the ‘correctly classified data’ would all come from the majority class. This is because most algorithms do not perform well with imbalanced datasets. It will tend to be bias towards the majority class. 
+												  	<br><br>
+												  	To deal with this problem, there are two approaches that we have used in this dataset: Oversampling with Synthetic Minority Over-sampling Technique (SMOTE) and Edited Nearest Neighbours (ENN).
+												  	<br><br>
+												  	The SMOTE technique creates synthetic data on the minority class by finding the K-nearest neighbour (KNN), choses a random ‘neighbour’ and create a similar datapoint as the ‘neighbour’ randomly.
+												  	<br><br>
+												  	ENN removes datapoint if the datapoint’s class is different from the majority of it K nearest neighbours.
+												  	<br><br>
+												  	After resampling, we will increase the percentage of minority class from 13.9% to 38. 
+												  	<br><br>
+												  	<img src="images/resamp_pie.png" alt="" />
+												  	<br><br>
+
+												  </p>
+
+												</div>
+												</div>
 										</article>
 									</div>
 								</section>
@@ -460,14 +629,14 @@
 						<div class="inner">
 
 							<!-- Search -->
-								<section id="search" class="alt">
+								<!--<section id="search" class="alt">
 									<form method="post" action="#">
 										<input type="text" name="query" id="query" placeholder="Search" />
 									</form>
 								</section>
 
 							<!-- Menu -->
-								<nav id="menu">
+								<!--<nav id="menu">
 									<header class="major">
 										<h2>Menu</h2>
 									</header>
@@ -502,7 +671,7 @@
 								</nav>
 
 							<!-- Section -->
-								<section>
+								<!--<section>
 									<header class="major">
 										<h2>Ante interdum</h2>
 									</header>
@@ -530,19 +699,20 @@
 									<header class="major">
 										<h2>Get in touch</h2>
 									</header>
-									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+									<p><strong>Joannas</strong> Yeow<br><br>
+									Aspiring data scientist seeking for opportunitues.</p>
 									<ul class="contact">
-										<li class="fa-envelope-o"><a href="#">information@untitled.tld</a></li>
-										<li class="fa-phone">(000) 000-0000</li>
-										<li class="fa-home">1234 Somewhere Road #8254<br />
-										Nashville, TN 00000-0000</li>
+										<li class="fa-envelope-o"><a href="mailto:joannas.y@live.com.sg">joannas.y@live.com.sg</a></li>
+										<li class="fa-phone">+65 9837 8407</li>
+										<!--<li class="fa-home">1234 Somewhere Road #8254<br />
+										Nashville, TN 00000-0000</li>-->
 									</ul>
 								</section>
 
 							<!-- Footer -->
-								<footer id="footer">
+								<!--<footer id="footer">
 									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
+								</footer> -->
 
 						</div>
 					</div>
