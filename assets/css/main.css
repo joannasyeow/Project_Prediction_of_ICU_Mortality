@@ -4193,3 +4193,13 @@
     cursor: pointer;
 }
 
+
+/* Scrolly */
+
+.container {
+	width: 70em;
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+
